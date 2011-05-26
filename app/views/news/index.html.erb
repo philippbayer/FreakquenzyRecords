@@ -1,0 +1,15 @@
+
+<h1>News & Brainfarts</h1>
+<% @news.each do |news| %>
+	<h2 class="news-header">Title: <%= news.title %></h2>
+	<p class="news-body">Content: <%= news.content %></p>
+  <tr>
+    <td><%= link_to 'Edit', edit_news_path(news) %></td>
+    <td><%= link_to 'Destroy', news, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New News', new_news_path %>

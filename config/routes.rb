@@ -1,4 +1,6 @@
 FreakquenzyRecords::Application.routes.draw do
+  resources :news
+
   resources :user
   resources :band
   resources :static
