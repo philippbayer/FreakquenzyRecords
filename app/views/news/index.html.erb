@@ -1,8 +1,8 @@
 
 <h1>News & Brainfarts</h1>
 <% @news.each do |news| %>
-	<h2 class="news-header">Title: <%= news.title %> [<%= news.created_at.strftime("%H:%M on %d.%m.%y") %>]</h2>
-	<p class="news-body">Content: <%= news.content %></p>
+	<h2 class="news-header"><%= news.title %></h2><h5>[<%= news.created_at.strftime("%H:%M on %d.%m.%y") %>]</h5>
+	<p class="news-body"><%= news.content %></p>
   <tr>
     <td><%= link_to 'Edit', edit_news_path(news) %></td>
     <td><%= link_to 'Destroy', news, :confirm => 'Are you sure?', :method => :delete %></td>
