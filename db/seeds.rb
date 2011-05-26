@@ -19,3 +19,5 @@ BandUser.create(:band_id => 2, :user_id => 1)
 BandUser.create(:band_id => 2, :user_id => 2)
 
 News.create(:title => "And here we go", :content => "Und hier geht sie los, die Sause.")
+News.create(:title => "Mama!", :content => "I just killed a man")
+News.create(:title => "Put my gun against his head", :content => "Pulled the trigger now he's dead")
