@@ -9,11 +9,11 @@
 	</tr>
 	<% @users.each do |u| %>
 		<tr>
-		<td><%= u.name %></td>
+		<td><%= link_to( u.name, u) %></td>
 		<td><%= u.description %></td>
 		<% @band_users.each do |bu| %>
 			<% if bu.user_id == u.id %>
-				<td><%= Band.find_by_id(bu.band_id).name %></td>
+				<td><%= link_to( Band.find_by_id(bu.band_id).name, Band.find_by_id(bu.band_id) ) %></td>
 			<% end %>
 	<% end %>
 <% end %>
