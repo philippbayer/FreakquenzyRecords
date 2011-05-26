@@ -1,9 +1,10 @@
 FreakquenzyRecords::Application.routes.draw do
+  resources :static do
+	  get 'index', 'faq', :on => :collection
+  end
   resources :news
-
   resources :user
   resources :band
-  resources :static
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
