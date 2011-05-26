@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+#
+
+User.create( :name => "bla", :description => "dudddud" )
+
+Band.create(:name => "bandname", :description => "powerivolence" )
+
+BandUser.create(:band_id => 1, :user_id => 1)
