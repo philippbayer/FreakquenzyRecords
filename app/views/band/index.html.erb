@@ -1,4 +1,16 @@
+<h1>Indexing all bands</h1>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>User</th>
+	</tr>
 <% @bands.each do |b| %>
-	Name: <%= b.name %><br/>
-	Description: <%= b.description %>
+	<tr>
+		<td><%= b.name %></td>
+		<td><%= b.description %></td>
+		<td>Misses the rest <%= User.find_by_id(BandUser.find_by_band_id(b.id).user_id).name %></td>
+	</tr>
 <% end %>
+</table>

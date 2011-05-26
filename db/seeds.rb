@@ -7,8 +7,14 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 #
 
-User.create( :name => "bla", :description => "dudddud" )
+User.create( :name => "1stuser", :description => "some dick dunno" )
+User.create( :name => "2nduser", :description => "another" )
 
-Band.create(:name => "bandname", :description => "powerivolence" )
+Band.create(:name => "1stband", :description => "powerivolence" )
+Band.create(:name => "2ndband", :description => "post hypnotic powergore")
 
+# now i wanna have one user in two bands and have one band have two users
 BandUser.create(:band_id => 1, :user_id => 1)
+BandUser.create(:band_id => 2, :user_id => 1)
+BandUser.create(:band_id => 2, :user_id => 2)
+
