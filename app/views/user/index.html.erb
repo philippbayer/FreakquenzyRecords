@@ -1,0 +1,23 @@
+<center>
+<h1>Indexing this shit motherfucker</h1>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Bands</th>
+	</tr>
+	<% @users.each do |u| %>
+		<tr>
+		<td><%= u.name %></td>
+		<td><%= u.description %></td>
+		<% @band_users.each do |bu| %>
+			<% if bu.user_id == u.id %>
+				<td><%= Band.find_by_id(bu.band_id).name %></td>
+			<% end %>
+	<% end %>
+<% end %>
+		</tr>
+</tr>
+</tr>
+</center>

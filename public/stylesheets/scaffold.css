@@ -1,5 +1,29 @@
-.header{
-	background: green;
-	border: solid red;
-	border-width: 1px;
+/* color-styles from kuler: http://kuler.adobe.com/#create/fromacolor */
+/* Too military IMHO */
+
+body {
+	background-color: #87835B
 }
+
+h1 {
+	color: #363025
+}
+
+table {
+	color: #363025
+}
+
+.header{
+	background: #999258;
+	color: #363025
+}
+
+a:link {
+	color: #5C5541
+}
+
+a:visited {
+    color: #136302
+}
+
+

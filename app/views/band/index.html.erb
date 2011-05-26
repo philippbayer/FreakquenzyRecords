@@ -1,3 +1,4 @@
+<center>
 <h1>Indexing all bands</h1>
 
 <table>
@@ -10,7 +11,13 @@
 	<tr>
 		<td><%= b.name %></td>
 		<td><%= b.description %></td>
-		<td>Misses the rest <%= User.find_by_id(BandUser.find_by_band_id(b.id).user_id).name %></td>
+		<!-- This crap belongs in a method -->
+		<% @band_users.each do |bu| %>
+			<% if bu.band_id == b.id %>
+				<td><%= User.find_by_id(bu.user_id).name %></td>
+			<% end %>
+		<% end %>
 	</tr>
 <% end %>
 </table>
+</center>
