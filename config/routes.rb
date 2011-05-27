@@ -1,6 +1,6 @@
 FreakquenzyRecords::Application.routes.draw do
   resources :static do
-	  get 'index', 'faq', :on => :collection
+	  get 'index', 'about', :on => :collection
   end
   resources :news
   resources :user

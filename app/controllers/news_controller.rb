@@ -3,6 +3,7 @@ class NewsController < ApplicationController
   # GET /news.xml
   def index
     @news = News.find(:all, :order => "id DESC")
+	@name = "News"
 
     respond_to do |format|
       format.html # index.html.erb
@@ -68,5 +69,14 @@ class NewsController < ApplicationController
       format.html { redirect_to(news_index_url) }
       format.xml  { head :ok }
     end
+  end
+
+  def show
+	  @news = News.find(params[:id])
+
+	  respond_to do |format|
+		  format.html
+		  format.xml
+	  end
   end
 end

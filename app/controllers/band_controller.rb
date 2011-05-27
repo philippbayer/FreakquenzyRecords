@@ -4,6 +4,7 @@ class BandController < ApplicationController
 		# showing all bands
 		@bands = Band.find(:all)
 		@band_users = BandUser.find(:all)
+		@name = "All bands"
 
 		respond_to do |format|
 			format.html
@@ -15,6 +16,7 @@ class BandController < ApplicationController
 		
 		@band = Band.find(params[:id])
 		@band_users = BandUser.find(:all)
+        @name = @band.name
 
 		respond_to do |format|
 			format.html
