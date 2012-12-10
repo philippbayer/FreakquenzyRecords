@@ -1,0 +1,45 @@
+This is the Frekquenzy Records-page.
+
+It should hold:
+
+a) Users via Devise
+
+salted bcrypt-pws
+has-many-Bands
+b) Bands
+
+"show"-page with general info
+
+has-many-users
+
+linked users are able to change show-page
+
+c) File-uploads:
+
+Jams (MP3? FLAC?), Flyers n stuff - look into 
+
+d) News
+
+Only admin allowed to post News
+
+e) Magic
+
+
+Devise-helpers (from Devise-readme):
+
+Devise will create some helpers to use inside your controllers and views. To set up a controller with user authentication, just add this before_filter:
+
+before_filter :authenticate_user!
+
+To verify if a user is signed in, use the following helper:
+
+user_signed_in?
+
+For the current signed-in user, this helper is available:
+
+current_user
+
+You can access the session for this scope:
+
+user_session
+

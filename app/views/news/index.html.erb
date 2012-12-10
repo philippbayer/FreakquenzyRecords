@@ -1,8 +1,0 @@
-
-<h1>News & Brainfarts</h1>
-<table>
-<% @news.each do |news| %>
-	<tr class="news-header"><b><%= news.title %></b>, <%= news.created_at.strftime("%H:%M on %d.%m.%y") %></tr><br/>
-	<tr class="news-body"><%= news.content %></tr><br/><br/>
-<% end %>
-</table>
