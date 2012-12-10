@@ -2,11 +2,21 @@
 <html>
 <head>
   <title>FreakquenzyRecords</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<!-- This is the topbar -->
+<header class="navbar navbar-fixed-top">
+      <nav class="navbar-inner">
+              <div class="container">
+                  <%= render 'layouts/navigation' %>
+              </div>
+      </nav>
+</header>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>

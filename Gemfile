@@ -21,6 +21,10 @@ end
 
 gem 'jquery-rails'
 
+# Bootstrap
+gem "twitter-bootstrap-rails"
+gem "less-rails" 
+
 # user auth
 gem 'devise'
 gem 'devise-encryptable'
