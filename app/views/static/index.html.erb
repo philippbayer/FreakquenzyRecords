@@ -1,1 +1,6 @@
 <legend>Welcome</legend>
+
+
+<% if current_user %>
+    Hi <%= current_user.name %>
+<% end %>

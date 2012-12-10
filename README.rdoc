@@ -6,6 +6,7 @@ a) Users via Devise
 
 salted bcrypt-pws
 has-many-Bands
+
 b) Bands
 
 "show"-page with general info
@@ -49,3 +50,7 @@ user_session
 You need RVM installed, right now:
 
 just run bundle install.
+
+=== Running
+
+Right now, just run 'rails s', server is on localhost:3000
