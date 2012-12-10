@@ -6,8 +6,8 @@
     <input type="text" class="search-query" placeholder="Search">
   </form>
   <% if user_signed_in? %>
-    <li><a href="#">Log out</a></li>
+    <li><a href="/users/sign_out">Log out</a></li>
   <% else %>
-    <li><a href="#">Log in</a></li>
+    <li><a href="/users/sign_in">Log in</a></li>
   <% end %>
 </ul>
