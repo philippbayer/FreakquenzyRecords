@@ -1,4 +1,6 @@
 FreakquenzyRecords::Application.routes.draw do
+  resources :bands
+
   devise_for :users
 
   root :to => "static#index"
