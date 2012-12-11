@@ -1,9 +1,11 @@
 FreakquenzyRecords::Application.routes.draw do
   resources :bands
-
+  
   devise_for :users
 
   root :to => "static#index"
+
+  match 'users/index' => 'users#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

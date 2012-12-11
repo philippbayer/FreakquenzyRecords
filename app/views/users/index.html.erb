@@ -1,0 +1,13 @@
+<legend>Overview of all users</legend>
+<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+        <th>bla</th>
+    </tr>
+    <% @users.each do |u| %>
+    <tr>
+        <td><%= u.name %></td>
+        <td>blub</td>
+    </tr>
+    <% end %>
+</table>
