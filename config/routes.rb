@@ -7,6 +7,7 @@ FreakquenzyRecords::Application.routes.draw do
 
   match 'users/index' => 'users#index'
   match 'newsitems/index' => 'newsitems#index'
+  match 'users/admin' => 'users#admin'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

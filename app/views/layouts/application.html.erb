@@ -9,14 +9,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<!-- This is the topbar -->
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= render 'layouts/navigation' %>
-    </div>
-  </div>
-</div>
+<!-- This is the navbar -->
+<%= render 'layouts/navigation' %>
 
 <% if false %>
   <div class="alert alert-success"><p class="notice"><%= notice %></p></div>
@@ -24,7 +18,7 @@
 <% end %>
 <div class="container">
   <%= yield %>
-</div>
+</div><!-- end container -->
 
 </body>
 </html>

@@ -1,14 +1,23 @@
-<%= link_to "Home", root_path, :class => 'brand' %>
-<ul class="nav">
-  <li><a href="/news/index">News</a></li>
-  <li><a href="#">Bands</a></li>
-  <li><%= link_to "Users", '/users/index' %></a></li>
-  <form class="navbar-search pull-left">
-    <input type="text" class="search-query" placeholder="Search">
-  </form>
-  <% if user_signed_in? %>
-    <li><a href="/users/sign_out">Log out</a></li>
-  <% else %>
-    <li><a href="/users/sign_in">Log in</a></li>
-  <% end %>
-</ul>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+        <%= link_to "Home", root_path, :class => 'brand' %>
+        <ul class="nav">
+        <li><a href="/newsitems/index">News</a></li>
+        <li><a href="#">Bands</a></li>
+        <li><%= link_to "Users", '/users/index' %></a></li>
+        <form class="navbar-search pull-left">
+            <input type="text" class="search-query" placeholder="Search">
+        </form>
+        <% if user_signed_in? %>
+            <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+        <% else %>
+            <li><%= link_to "Login", new_user_session_path %></li>
+        <% end %>
+        <% if current_user.try("admin?") %>
+            <li><a href="/users/admin">Admin-area</a></li>
+        <% end %>
+        </ul>
+    </div>
+  </div>
+</div><!-- end navbar -->
