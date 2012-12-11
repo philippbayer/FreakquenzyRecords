@@ -12,11 +12,16 @@
 <!-- This is the navbar -->
 <%= render 'layouts/navigation' %>
 
-<% if false %>
-  <div class="alert alert-success"><p class="notice"><%= notice %></p></div>
-  <div class="alert alert-error"><p class="alert"><%= alert %></p></div>
-<% end %>
 <div class="container">
+
+  <% if notice %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
+
+  <% if alert %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
+
   <%= yield %>
 </div><!-- end container -->
 
