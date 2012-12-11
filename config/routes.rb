@@ -6,6 +6,7 @@ FreakquenzyRecords::Application.routes.draw do
   root :to => "static#index"
 
   match 'users/index' => 'users#index'
+  match 'newsitems/index' => 'newsitems#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
