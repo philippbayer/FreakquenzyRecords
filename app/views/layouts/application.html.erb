@@ -15,14 +15,19 @@
 <div class="container">
 
   <% if notice %>
-    <p class="notice"><%= notice %></p>
-  <% end %>
+    <div class="alert alert-info">
+      <%= notice %><a class="close" data-dismiss="alert" href="#">&times;</a>
+    </div>
+  <% end # notice%>
 
   <% if alert %>
-    <p class="alert"><%= alert %></p>
-  <% end %>
+    <div class="alert alert-error">
+      <%= alert %><a class="close" data-dismiss="alert" href="#">&times;</a>
+    </div>
+  <% end # alert %>
 
   <%= yield %>
+
 </div><!-- end container -->
 
 </body>
