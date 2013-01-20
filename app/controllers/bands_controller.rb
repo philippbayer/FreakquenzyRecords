@@ -1,6 +1,4 @@
 class BandsController < ApplicationController
-  # GET /bands
-  # GET /bands.json
   def index
     @bands = Band.all
 
@@ -10,8 +8,6 @@ class BandsController < ApplicationController
     end
   end
 
-  # GET /bands/1
-  # GET /bands/1.json
   def show
     @band = Band.find(params[:id])
 
@@ -21,8 +17,6 @@ class BandsController < ApplicationController
     end
   end
 
-  # GET /bands/new
-  # GET /bands/new.json
   def new
     @band = Band.new
 
@@ -32,13 +26,10 @@ class BandsController < ApplicationController
     end
   end
 
-  # GET /bands/1/edit
   def edit
     @band = Band.find(params[:id])
   end
 
-  # POST /bands
-  # POST /bands.json
   def create
     @band = Band.new(params[:band])
 
@@ -53,8 +44,6 @@ class BandsController < ApplicationController
     end
   end
 
-  # PUT /bands/1
-  # PUT /bands/1.json
   def update
     @band = Band.find(params[:id])
 
@@ -69,8 +58,6 @@ class BandsController < ApplicationController
     end
   end
 
-  # DELETE /bands/1
-  # DELETE /bands/1.json
   def destroy
     @band = Band.find(params[:id])
     @band.destroy

@@ -11,13 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130114125649) do
+ActiveRecord::Schema.define(:version => 20130120011834) do
 
   create_table "bands", :force => true do |t|
     t.string   "name"
+    t.string   "slug"
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  add_index "bands", ["name"], :name => "index_bands_on_name"
+  add_index "bands", ["slug"], :name => "index_bands_on_slug", :unique => true
+
+  create_table "bands_users", :id => false, :force => true do |t|
+    t.integer "band_id"
+    t.integer "user_id"
   end
 
   create_table "newsitems", :force => true do |t|
@@ -33,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20130114125649) do
   end
 
   create_table "users", :force => true do |t|
+    t.string   "slug"
     t.string   "name",                                      :null => false
     t.string   "description"
     t.boolean  "admin",                  :default => false
@@ -51,6 +61,8 @@ ActiveRecord::Schema.define(:version => 20130114125649) do
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["name"], :name => "index_users_on_name"
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+  add_index "users", ["slug"], :name => "index_users_on_slug", :unique => true
 
 end

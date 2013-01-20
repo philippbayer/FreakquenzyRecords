@@ -1,6 +1,6 @@
-<h1>Listing bands</h1>
+<legend>Overview of all bands</legend>
 
-<table>
+<table class="table table-striped">
   <tr>
     <th>Name</th>
     <th>Description</th>
@@ -14,12 +14,10 @@
     <td><%= band.name %></td>
     <td><%= band.description %></td>
     <td><%= link_to 'Show', band %></td>
+    <% if true == true # later: if user is part of band %>
     <td><%= link_to 'Edit', edit_band_path(band) %></td>
-    <td><%= link_to 'Destroy', band, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New Band', new_band_path %>

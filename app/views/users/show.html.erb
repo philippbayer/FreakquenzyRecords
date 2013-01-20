@@ -1,0 +1,11 @@
+<legend><%= @user.name %>'s page.</legend>
+
+what goes here: what the user messaged, 
+
+<%= @user.name %>'s bands
+
+<% if @user.bands != [] %>
+    <% @user.bands.each do |ub| %>
+        <%= link_to ub.name, ub %>
+    <% end %>
+<% end %>

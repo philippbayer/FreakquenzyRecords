@@ -6,7 +6,7 @@
     </tr>
     <% @users.each do |u| %>
     <tr>
-        <td><%= u.name %></td>
+        <td><%= link_to u.name, u %></td>
         <td>blub</td>
     </tr>
     <% end %>

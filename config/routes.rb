@@ -3,10 +3,11 @@ FreakquenzyRecords::Application.routes.draw do
   resources :songs
   
   devise_for :users
+  resources :users
 
   root :to => "static#index"
 
-  match 'users/index' => 'users#index'
+  #match 'users/index' => 'users#index'
   match 'songs/index' => 'songs#upload'
   match 'newsitems/index' => 'newsitems#index'
   match 'users/admin' => 'users#admin'

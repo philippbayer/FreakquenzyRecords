@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  # make /users/bla possible instead of users/1
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable

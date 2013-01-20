@@ -36,6 +36,8 @@ gem "less-rails"
 gem 'devise'
 gem 'devise-encryptable'
 
+# nice urls
+gem 'friendly_id', '~> 4.0.9'
 
 # for rails c?
 gem 'minitest'

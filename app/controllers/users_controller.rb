@@ -5,6 +5,14 @@ class UsersController < ApplicationController
     end
 
     def admin
+        # admin should be able to delete and change everything.
+        @users = User.all
+        @songs = Song.all
+        @bands = Band.all
+    end
+
+    def show
+        @user = User.find_by_name(params[:id])
     end
 
     private
