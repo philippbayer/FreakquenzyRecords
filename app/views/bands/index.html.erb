@@ -1,4 +1,7 @@
 <legend>Overview of all bands</legend>
+<% if current_user %>
+<p><%= link_to "Create a new band!", :controller => "bands", :action => "new" %></p>
+<% end %>
 
 <table class="table table-striped">
   <tr>

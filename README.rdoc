@@ -10,20 +10,22 @@ has-many-Bands
 b) Bands
 
 "show"-page with general info
-
 has-many-users
-
 linked users are able to change show-page
 
 c) File-uploads:
 
-Jams (MP3? FLAC?), Flyers n stuff - look into 
+Jams (MP3? FLAC?), Flyers n stuff - look into (flyers may be enough for admin)
 
 d) News
 
-Only admin allowed to post News
+Only admin allowed to post News, maybe feed for band-news?
 
 e) Magic
+
+Search is handled by Sphinx - install Sphinx from here[http://pat.github.com/ts/en/installing_sphinx.html].
+To index the data: <tt>rake thinking_sphinx:index</tt>
+To start the Sphinx daemon: <tt>rake thinking_sphinx:start</tt>
 
 
 === Devise-helpers (from Devise-readme)

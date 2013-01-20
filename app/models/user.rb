@@ -15,4 +15,10 @@ class User < ActiveRecord::Base
   
   # automatically generate users_bands
   has_and_belongs_to_many :bands
+
+  define_index do
+      indexes name, :sortable => true
+      indexes description
+      has id, created_at, updated_at
+  end
 end

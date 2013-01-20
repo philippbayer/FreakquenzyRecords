@@ -39,6 +39,9 @@ gem 'devise-encryptable'
 # nice urls
 gem 'friendly_id', '~> 4.0.9'
 
+# search 
+gem 'thinking-sphinx', '2.0.10'
+
 # for rails c?
 gem 'minitest'
 # To use ActiveModel has_secure_password

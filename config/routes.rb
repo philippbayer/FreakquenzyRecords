@@ -1,6 +1,7 @@
 FreakquenzyRecords::Application.routes.draw do
   resources :bands
   resources :songs
+  resources :search_results
   
   devise_for :users
   resources :users
